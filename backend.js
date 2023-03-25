@@ -6,7 +6,7 @@ var cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = 3000;
+const port = 80;
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -48,6 +48,9 @@ let messageAll = [
     content: "give me a short descriptions of william",
   },
 ];
+app.get("/", (rea, res) => {
+  res.send("hi");
+});
 
 app.post("/chat", async (req, res) => {
   const newMessage = req.body.content;

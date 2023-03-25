@@ -1,4 +1,4 @@
-const key = "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";
+const key = "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";
 
 const express = require("express");
 const { Configuration, OpenAIApi } = require("openai");
